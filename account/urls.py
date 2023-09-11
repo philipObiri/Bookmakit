@@ -44,7 +44,8 @@ urlpatterns = [
     # All the default URLs to Login, Logout, Password Reset and Change :
     path('', include('django.contrib.auth.urls')),
 
-    
+    # User Registration 
+    path('register/', views.register, name='register'),
 
      # Dashboard URL
     path("", views.dashboard, name="dashboard"),
