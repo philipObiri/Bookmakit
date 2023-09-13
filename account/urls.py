@@ -47,6 +47,9 @@ urlpatterns = [
     # User Registration 
     path('register/', views.register, name='register'),
 
+    #User Profile Edits
+    path('edit/', views.edit, name='edit'),
+
      # Dashboard URL
     path("", views.dashboard, name="dashboard"),
 ]
