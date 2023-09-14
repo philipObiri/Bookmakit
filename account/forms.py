@@ -49,6 +49,19 @@ class UserEditForm(forms.ModelForm):
         model = User 
         fields = ['first_name', 'last_name', 'email']
 
+    
+    """
+    Validation for the email field that prevents users from changing / updating their 
+    existing email address to an existing email address of another user.
+    """
+    def clean_email(self):
+        data = self.cleaned_data['email']
+        qs = User.objects.exclude(id=self.instance.id)\
+                         .filter(email=data)
+        if qs.exists():
+            raise forms.ValidationError('Email already in use.')
+        return data
+
 
 """
 Allow users to edit the profile data that is saved in the Custom
