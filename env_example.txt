@@ -1,0 +1,28 @@
+SECRET_KEY=
+
+DEBUG=
+
+ALLOW_HOSTS=
+
+
+
+# ============ POSTGRESQL DATABASE CONFIGURATION ==================
+DB_NAME=
+DB_USER=
+DB_PASSWORD=
+DB_HOST=
+DB_PORT=
+
+
+
+# Facebook Auth
+FACEBOOK_APP_ID=
+FACEBOOK_APP_SECRET=
+
+
+# Google Auth
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY= # Google Client ID
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=  # Google Client Secret KEY
+
+
+
